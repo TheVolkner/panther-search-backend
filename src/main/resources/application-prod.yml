@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    url: ${MYSQL_URL_PROD}
+    username: ${MYSQLUSER}
+    password: ${MYSQLPASSWORD}
+
+  sql:
+    init:
+      mode: always

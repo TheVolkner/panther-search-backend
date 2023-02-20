@@ -1,0 +1,18 @@
+#CONEXIÓN LOCAL - LOCAL HOST CON ROOT
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/webpages_db?useSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: root
+    password: admin
+
+
+  #CONEXIÓN REMOTA - CON PANTHER.
+  #spring:
+  #  datasource:
+  #    url: jdbc:mysql://190.78.38.40:3306/sistema_examenes?useSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+  #    username: panther
+  #    password: tech3014
+
+  sql:
+    init:
+      mode: always
