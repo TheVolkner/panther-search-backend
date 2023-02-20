@@ -1,0 +1,23 @@
+version: '3.8'
+services:
+  mysql-db:
+    image: mysql
+    volumes:
+      - ./mysql-data:/var/lib/mysql
+    ports:
+      - 33065:3306
+    environment:
+      - "MYSQL_DATABASE=sistema_examenes"
+      - "MYSQL_ROOT_PASSWORD=secret"
+  productos-springboot:
+    build: .
+    restart: unless-stopped
+    ports:
+      - 9000:8090
+    depends_on:
+      - mysql-db
+    environment:
+      - "SPRING_PROFILES_ACTIVE=prod"
+      - "MYSQL_URL=jdbc:mysql://mysql-db:3306/sistema_examenes?useSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&allowPublicKeyRetrieval=true"
+      - "MYSQL_USERNAME=root"
+      - "MYSQL_PASSWORD=secret"
