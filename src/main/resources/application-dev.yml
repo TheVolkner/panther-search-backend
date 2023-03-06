@@ -10,8 +10,8 @@ spring:
   #spring:
   #  datasource:
   #    url: jdbc:mysql://190.78.38.40:3306/sistema_examenes?useSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
-  #    username: panther
-  #    password: tech3014
+  #    username:
+  #    password:
 
   sql:
     init:
