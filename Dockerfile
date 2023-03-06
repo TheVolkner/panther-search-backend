@@ -1,4 +1,4 @@
 FROM openjdk:19
-COPY out/artifacts/techpanther-search-engine/techpanther-search-engine.jar techpanther-search-engine.jar
+COPY out/artifacts/techpanther-search-engine/panther-search-engine.jar panther-search-engine.jar
 EXPOSE 8090
-ENTRYPOINT ["java","-jar","/techpanther-search-engine.jar"]
+ENTRYPOINT ["java","-jar","/panther-search-engine.jar"]
